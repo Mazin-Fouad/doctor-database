@@ -19,7 +19,15 @@ function renderContent(doctor) {
            <span>${doctor.street} <br>
            ${doctor.zipcode} ${doctor.city}</span>
          </div>
-         <div class="col-md-6">Column</div>
+         <div class="col-md-6 right-section d-flex flex-sm-column flex-md-column flex-lg-row  justify-content-between flex-wrap align-items-center">
+            <span>Monday: ${doctor.opening_hours.monday} </span>
+            <span>Tuesday: ${doctor.opening_hours.tuesday}</span>
+            <span>Wednesday: ${doctor.opening_hours.wednesday}</span>
+            <span>Thursday: ${doctor.opening_hours.thursday}</span>
+            <span>Friday ${doctor.opening_hours.friday}</span>
+            <span>Saturday: ${doctor.opening_hours.saturday}</span> 
+            <span>Sunday: ${doctor.opening_hours.sunday}</span>
+         </div>
        </div>
      </div>`;
 }
