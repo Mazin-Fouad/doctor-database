@@ -3,9 +3,10 @@ function renderContent(doctor) {
   const specializations = doctor.specialities.join(', '); // Join the specialities array
 
   return /*html*/ `
-    <div class="card p-3 mb-5">
+    <div class="card p-3 mb-5 position-relative">
        <div class="row">
          <div class="col-md-6 left-section">
+            <span class="bg-success text-light  text-center doctor-id position-absolute">${doctor.id}</span>
            <div class="media-container d-flex align-items-center mb-3">
              <div>
              <img class="img" src="${baseUrl}${doctor.img}"  alt="" />

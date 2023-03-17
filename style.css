@@ -14,3 +14,12 @@
 .left-section {
   border-right: 3px solid #00000045;
 }
+
+.doctor-id {
+  display: block;
+  width: 30px !important;
+  height: 30px !important;
+  line-height: 1.7;
+  left: 0px !important;
+  top: 1px !important;
+}
