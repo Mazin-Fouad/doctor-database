@@ -41,6 +41,7 @@ function getDoctorInfo(i) {
   document.getElementById('img').src = baseUrl + doctor.img;
   document.getElementById('name').innerHTML = doctor.title + ` ` + doctor.first_name + ` ` + doctor.last_name;
   document.getElementById('specialities').innerHTML = doctor.specialities.join(', ');
+  document.getElementById('address').innerHTML = `${doctor.street}  ${doctor.city}`;
 }
 
 function showModal() {
