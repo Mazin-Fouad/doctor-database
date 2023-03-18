@@ -1,3 +1,5 @@
+let doctorsList;
+
 /**
 Fetches doctor data from an external API and renders the data on the webpage.
 @function
@@ -17,14 +19,20 @@ function getData() {
  *
  * @param {Array<Object>} doctors - An array of doctor objects containing their information.
  * @returns {void}
+ * // Render an array of doctor data on the webpage renderData
  */
 function renderData(doctors) {
+  doctorsList = doctors;
   let content = document.getElementById('content');
   content.innerHTML = '';
 
   for (let i = 0; i < doctors.length; i++) {
     const doctor = doctors[i];
-
-    content.innerHTML += /*html*/ renderContent(doctor);
+    console.log(doctor);
+    content.innerHTML += /*html*/ renderContent(doctor, doctors, i);
   }
+}
+
+function getDoctorInfo(i) {
+  console.log(doctorsList[i]);
 }
