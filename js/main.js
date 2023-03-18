@@ -36,3 +36,8 @@ function renderData(doctors) {
 function getDoctorInfo(i) {
   console.log(doctorsList[i]);
 }
+
+document.getElementById('triggerModal').addEventListener('click', function () {
+  var myModal = new bootstrap.Modal(document.getElementById('myModal'));
+  myModal.show();
+});
