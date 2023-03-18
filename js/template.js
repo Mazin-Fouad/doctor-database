@@ -19,12 +19,13 @@ function renderContent(doctor, doctors, i) {
            <span>${doctor.street} <br>
            ${doctor.zipcode} ${doctor.city}</span>
          </div>
-         <div class="col-md-6 right-section d-flex flex-sm-column flex-md-column flex-lg-row  justify-content-between flex-wrap align-items-center">
-            <span>Monday: ${doctor.opening_hours.monday} Uhr</span>
-            <span>Tuesday: ${doctor.opening_hours.tuesday} Uhr</span>
-            <span>Wednesday: ${doctor.opening_hours.wednesday} Uhr</span>
-            <span>Thursday: ${doctor.opening_hours.thursday} Uhr</span>
-            <span>Friday ${doctor.opening_hours.friday} Uhr</span>
+
+         <div class="col-md-6 right-section d-flex flex-sm-column flex-md-column flex-lg-row  justify-content-between flex-wrap align-items-lg-center">
+            <span>Monday: ${doctor.opening_hours.monday} ${doctor.opening_hours.monday === 'closed' ? '' : ' Uhr '}</span>
+            <span>Tuesday: ${doctor.opening_hours.tuesday} ${doctor.opening_hours.tuesday === 'closed' ? '' : ' Uhr '}</span>
+            <span>Wednesday: ${doctor.opening_hours.wednesday} ${doctor.opening_hours.wednesday === 'closed' ? '' : ' Uhr '}</span>
+            <span>Thursday: ${doctor.opening_hours.thursday} ${doctor.opening_hours.thursday === 'closed' ? '' : ' Uhr '}</span>
+            <span>Friday: ${doctor.opening_hours.friday} ${doctor.opening_hours.friday === 'closed' ? '' : ' Uhr '}</span>
             <span>Saturday: ${doctor.opening_hours.saturday} </span> 
             <span>Sunday: ${doctor.opening_hours.sunday}</span>
          </div>
