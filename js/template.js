@@ -3,7 +3,7 @@ function renderContent(doctor, doctors, i) {
   const specializations = doctor.specialities.join(', '); // Join the specialities array
 
   return /*html*/ `
-    <div id="triggerModal" class="card p-3 mb-5 position-relative" onclick="getDoctorInfo(${i})">
+    <div  class="card p-3 mb-5 position-relative cursor-pointer" onclick="getDoctorInfo(${i})">
        <div class="row">
          <div class="col-md-6 left-section">
             <span class="bg-success text-light  text-center doctor-id position-absolute">${doctor.id}</span>

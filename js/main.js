@@ -34,10 +34,16 @@ function renderData(doctors) {
 }
 
 function getDoctorInfo(i) {
-  console.log(doctorsList[i]);
+  showModal();
+  const baseUrl = 'https://mazinfouad.com/Aufgabe%20Doctor%20Database/';
+  let doctor = doctorsList[i];
+  console.log(doctor);
+  document.getElementById('img').src = baseUrl + doctor.img;
+  document.getElementById('name').innerHTML = doctor.title + ` ` + doctor.first_name + ` ` + doctor.last_name;
+  document.getElementById('specialities').innerHTML = doctor.specialities.join(', ');
 }
 
-document.getElementById('triggerModal').addEventListener('click', function () {
-  var myModal = new bootstrap.Modal(document.getElementById('myModal'));
+function showModal() {
+  let myModal = new bootstrap.Modal(document.getElementById('myModal'));
   myModal.show();
-});
+}
