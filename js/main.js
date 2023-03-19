@@ -12,7 +12,7 @@ function getData() {
   fetch('https://mazinfouad.com/Aufgabe%20Doctor%20Database/get_doctors.php')
     .then((response) => response.json())
     .then((data) => renderData(data))
-    .catch((error) => console.error(error));
+    .catch((error) => showErrorText(error));
 }
 
 /**
@@ -47,4 +47,13 @@ function getDoctorInfo(i) {
 function showModal() {
   let myModal = new bootstrap.Modal(document.getElementById('myModal'));
   myModal.show();
+}
+
+function showErrorText(error) {
+  let errorText = document.getElementById('error-message');
+  errorText.classList.remove('d-none');
+  errorText.innerHTML = /*html*/ `
+  <h2>${error}</h2>
+  <p> Sorry, an error occurred while processing your request. Please try again later.</p>
+  `;
 }
